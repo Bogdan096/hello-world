@@ -1,39 +1,37 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navigation from './components/Navigate';
-import Container from './components/Container';
+// src/App.js
+import React, { useState } from 'react';
+import {Container, Container2} from './components/Container';
+
 import Button from './components/Button';
+import Content from './components/Content';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Menu from './components/Menu';
 
-const Home = () => (
-  <Container>
-    <h1>Hello world!</h1>
-    <Button onClick={() => alert('Button Clicked!')}>Click Me</Button>
-  </Container>
-);
-
-const About = () => (
-  <Container>
-    <h1>About Page</h1>
-  </Container>
-);
-
-const Contact = () => (
-  <Container>
-    <h1>Contact Page</h1>
-  </Container>
-);
+const labWorks = [
+    { title: 'Лабораторная работа 1', description: 'Описание лабораторной работы 1.' },
+    { title: 'Лабораторная работа 2', description: 'Описание лабораторной работы 2.' },
+    { title: 'Лабораторная работа 3', description: 'Описание лабораторной работы 3.' },
+];
 
 const App = () => {
-  return (
-    <Router>
-      <Navigation />
-      <Routes>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-      </Routes>
-    </Router>
-  );
+    const [selectedDescription, setSelectedDescription] = useState('');
+
+    const handleSelect = (description) => {
+        setSelectedDescription(description);
+    };
+
+    return (
+        <Container>
+            <Header />
+            <Menu items={labWorks} onSelect={handleSelect} />
+            <Container2> 
+                <Content description={selectedDescription} />
+            </Container2>
+            
+            <Footer />
+        </Container>
+    );
 };
 
 export default App;
