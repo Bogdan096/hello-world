@@ -1,0 +1,30 @@
+/* Counter.css */
+.counter-container {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота на весь экран */
+}
+
+
+.counter-button {
+    font-family: 'Roboto', sans-serif; /* устанавливаем шрифт Roboto */
+    font-size: 20px; /* увеличиваем размер шрифта */
+    padding: 10px 20px; /* увеличиваем внутренние отступы кнопки */
+    margin: 20px; /* добавляем отступ между кнопками */
+    background-color: #99d117;
+    color: rgb(59, 55, 48);
+    border: none; /* убираем границу */
+    border-radius: 5px; /* скругленные углы */
+    cursor: pointer; /* добавляем указатель при наведении */
+    transition: background-color 0.3s; /* анимация при наведении */
+}
+
+.counter-button:hover {
+    background-color: #9b2929; /* более темный цвет при наведении */
+}
+
+.counter-title {
+    text-align: center; /* Центрирование текста */
+}

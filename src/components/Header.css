@@ -4,12 +4,13 @@
     font-size: 44px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     padding-bottom:12px;
     width: 100%;
     color: #00FF00; /* Кислотно-зеленый цвет */
     background-color: #055664;
-    top:0
+    top:0;
+    margin:0;
 }
 
 .footer {
@@ -21,4 +22,63 @@
     width: 100%;
     padding: 10px 0; /* Добавлено для вертикального отступа */
     bottom: 0; /* Прикрепление к низу */
+}
+
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    background-color: #9e1919; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    margin-top: 15px;
+}
+
+.logout-button:hover {
+    background-color: #808080; /* Цвет фона при наведении */
+    color: #ffffff; /* Цвет текста при наведении */
+}
+
+.auth-button {
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    background-color: #9e1919; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    margin-top: 15px;
+}
+
+.auth-button:hover {
+    background-color: #1ff303; /* Цвет фона при наведении */
+    color: #b12525; /* Цвет текста при наведении */
+}
+
+.user-email {
+    position: absolute;
+    top: 45px;
+    right: 280px;
+    font-family: 'Roboto', sans-serif; /* Задаем шрифт Roboto */
+    font-size: 27px;
+    margin-left: 10px; 
+    margin-bottom: 25px;/* Отступ слева от других элементов */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+/* Изменение цвета при наведении */
+.user-email:hover {
+    color: rgb(152, 177, 106); /* Здесь замените #ff7f50 на желаемый цвет при наведении */
 }
