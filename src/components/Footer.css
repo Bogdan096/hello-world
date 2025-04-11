@@ -16,3 +16,14 @@
     padding: 10px 0; /* Добавлено для вертикального отступа */
     bottom: 0; /* Прикрепление к низу */
 }
+
+
+.feedback-container {
+    max-height: 0; /* Начальная высота - 0 */
+    overflow: hidden; /* Скрываем содержимое */
+    transition: max-height 0.3s ease; /* Плавный переход */
+}
+
+.feedback-container.visible {
+    max-height: 500px; /* Максимальная высота при открытии (подберите значение) */
+}

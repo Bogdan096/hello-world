@@ -28,7 +28,7 @@
 .logout-button {
     position: absolute;
     top: 20px;
-    right: 180px;
+    right: 420px;
     background-color: #9e1919; /* Цвет фона кнопки */
     color: rgb(59, 55, 48); /* Цвет текста кнопки */
     font-family: 'Roboto', sans-serif;
@@ -70,7 +70,7 @@
 .user-email {
     position: absolute;
     top: 45px;
-    right: 280px;
+    right: 80px;
     font-family: 'Roboto', sans-serif; /* Задаем шрифт Roboto */
     font-size: 27px;
     margin-left: 10px; 
@@ -81,4 +81,71 @@
 /* Изменение цвета при наведении */
 .user-email:hover {
     color: rgb(152, 177, 106); /* Здесь замените #ff7f50 на желаемый цвет при наведении */
+}
+
+.main-button {
+    position: absolute;
+    top: 20px;
+    left: 210px;
+    background-color: #9e1919; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    margin-top: 15px;
+}
+
+.main-button:hover {
+    background-color: #1ff303; /* Цвет фона при наведении */
+    color: #b12525; /* Цвет текста при наведении */
+}
+
+.about-button {
+    position: absolute;
+    top: 20px;
+    right: 290px;
+    background-color: #9e1919; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    margin-top: 15px;
+}
+
+.about-button:hover {
+    background-color: #1ff303; /* Цвет фона при наведении */
+    color: #b12525; /* Цвет текста при наведении */
+}
+
+.theme-button {
+    position: absolute;
+    top: 20px;
+    left: 350px;
+    background-color: #9e1919; /* Цвет фона кнопки */
+    color: rgb(59, 55, 48); /* Цвет текста кнопки */
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    margin-top: 15px;
+}
+
+.theme-button:hover {
+    background-color: #1ff303; /* Цвет фона при наведении */
+    color: #b12525; /* Цвет текста при наведении */
+}
+
+.menu-button {
+    right: 200px; /* Добавляем отступ справа для кнопки меню */
 }

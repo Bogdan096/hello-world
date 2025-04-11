@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Импортируйте Link
 import './Menu.css';
+import { Drawer, Button, List, ListItem, ListItemText } from '@mui/material';
 import { useTheme } from '../ThemeContext';
 
 const Menu = ({ items, onSelect }) => {
@@ -13,26 +14,29 @@ const Menu = ({ items, onSelect }) => {
 
     return (
         <div className="menu">
-            <button className="menu-button" onClick={toggleMenu}>
+            <Button variant="contained" onClick={toggleMenu}>
                 Меню
-            </button>
-            {isOpen && (
-                <div className="menu-dropdown">
+            </Button>
+            <Drawer anchor="left" open={isOpen} onClose={toggleMenu}>
+                <div style={{ width: 250 }}>
                     <h3>Выберите лабораторную работу:</h3>
-                    <ul>
+                    <List>
                         {items.map((item, index) => (
-                            <li key={index}>
-                                <Link to={item.path} onClick={() => onSelect(item.description)}>
-                                    {item.title}
+                            <ListItem button key={index}>
+                                <Link to={item.path} onClick={() => {
+                                    onSelect(item.description);
+                                    toggleMenu(); // Закрываем меню после выбора
+                                }}>
+                                    <ListItemText primary={item.title} />
                                 </Link>
-                            </li>
+                            </ListItem>
                         ))}
-                    </ul>
+                    </List>
+                    {/* <Button variant="contained" onClick={toggleTheme}>
+                        Изменить тему
+                    </Button> */}
                 </div>
-            )}
-            <button className="theme-toggle-button" onClick={toggleTheme}>
-                Изменить тему
-            </button>
+            </Drawer>
         </div>
     );
 };
