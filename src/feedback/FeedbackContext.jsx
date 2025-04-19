@@ -33,7 +33,7 @@ export const FeedbackProvider = ({ children }) => { // Определяем ко
                 throw new Error('Ошибка при добавлении отзыва');
             }
             const data = await response.json();
-            setFeedbacks(prevFeedbacks => [...prevFeedbacks, data]);
+            setFeedbacks(prevFeedbacks => [...prevFeedbacks, feedback]);
         } catch (error) {
             console.error("Ошибка при добавлении отзыва:", error);
         }

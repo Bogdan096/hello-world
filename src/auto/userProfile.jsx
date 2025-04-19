@@ -26,7 +26,7 @@ const UserProfile = () => {
     const saveUserProfile = async (e) => {
         e.preventDefault(); // Предотвращаем перезагрузку страницы при отправке формы
         try {
-            if (!nickname || !age || !description) { // Проверяем, заполнены ли все поля
+            if (!nickname || !description) { // Проверяем, заполнены ли все поля
                 alert('Пожалуйста, заполните все поля.'); // Если нет, выводим предупреждение
                 return; // Выходим из функции
             }
